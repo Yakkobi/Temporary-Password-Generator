@@ -78,13 +78,16 @@ body {
 
 #optionsContainer {
   display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   row-gap: 15px;
-  column-gap: 105px;
-  font-size: 15px;
+}
+.optionRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px; /* adjust to taste */
 }
 
 .optionsText {
@@ -99,6 +102,15 @@ body {
   flex-direction: column;
   row-gap: 8px;
   color: aqua;
+}
+
+.sliderGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lengthValue {
+  font-size: 10px;
 }
 
 .titleTwoPart1 {
@@ -147,11 +159,15 @@ body {
 
 #optionsContainer2 {
   display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   row-gap: 15px;
-  column-gap: 105px;
   font-size: 15px;
+}
+.optionRow2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
 }

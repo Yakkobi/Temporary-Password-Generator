@@ -7,12 +7,12 @@
   </head>
   <body>
     <div id="title1">
-      <div class = "titleOnePart1">Temporary</div>
-      <div class = "passwordGenerator"> Password Generator </div>
+      <div class="titleOnePart1">Temporary</div>
+      <div class="passwordGenerator">Password Generator</div>
     </div>
 
     <div id="outputField">
-      <input type="text" class="output">
+      <input type="text" class="output" />
 
       <div class="copyButton">
         <button>Copy Password</button>
@@ -24,27 +24,47 @@
     </div>
 
     <div id="optionsContainer">
-      <div class="optionsText">
+      <div class="optionRow">
         <div class="textOption">Include Year</div>
+        <input
+          type="checkbox"
+          id="includeYear"
+          name="includeYear"
+          value="off"
+        />
+      </div>
+      <div class="optionRow">
         <div>Numbers</div>
+        <div class="sliderGroup">
+          <input
+            type="range"
+            class="numbersSlider"
+            min="6"
+            max="24"
+            value="12"
+          />
+          <div class="lengthValue">12</div>
+        </div>
+      </div>
+      <div class="optionRow">
         <div>Symbol Replace</div>
-      </div>
-
-      <div class="optionsInputs">
-  <input type="checkbox" id="includeYear" name="includeYear" value="off">
-  <input type="range" class="numbersSlider" min="6" max="24" value="12" />
-  <input type="checkbox" id="symbolReplace" name="symbolReplace" value="on" checked>
+        <input
+          type="checkbox"
+          id="symbolReplace"
+          name="symbolReplace"
+          value="on"
+          checked
+        />
       </div>
     </div>
- 
+
     <div id="title2">
-      <div class = titleTwoPart1>Secure</div>
-      <div class = "passwordGenerator"> Password Generator </div>
+      <div class="titleTwoPart1">Secure</div>
+      <div class="passwordGenerator">Password Generator</div>
     </div>
-
 
     <div id="outputField2">
-      <input type="text" class="output2">
+      <input type="text" class="output2" />
 
       <div class="copyButton2">
         <button>Copy Password</button>
@@ -55,21 +75,51 @@
       </div>
     </div>
 
-    
     <div id="optionsContainer2">
-      <div class="optionsText">
+      <div class="optionRow2">
         <div class="lengthOption">Length</div>
+        <div class="sliderGroup">
+          <input
+            type="range"
+            class="lengthSlider"
+            min="6"
+            max="24"
+            value="12"
+          />
+          <div class="lengthValue">12</div>
+        </div>
+      </div>
+      <div class="optionRow2">
         <div>Letters</div>
+        <input
+          type="checkbox"
+          id="lettersOption"
+          name="lettersOption"
+          value="on"
+          checked
+        />
+      </div>
+      <div class="optionRow2">
         <div>Numbers</div>
+        <input
+          type="checkbox"
+          id="numbersOption"
+          name="numbersOption"
+          value="on"
+          checked
+        />
+      </div>
+      <div class="optionRow2">
         <div>Symbols</div>
+        <input
+          type="checkbox"
+          id="SymbolsOption"
+          name="SymbolsOption"
+          value="on"
+          checked
+        />
       </div>
-
-      <div class="optionsInputs">
-<input type="range" class="lengthSlider" min="6" max="24" value="12" />
-  <input type="checkbox" id="lettersOption" name="lettersOption" value="on" checked>
-  <input type="checkbox" id="numbersOption" name="numbersOption" value="on" checked>
-  <input type="checkbox" id="SymbolsOption" name="SymbolsOption" value="on" checked>
-      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
