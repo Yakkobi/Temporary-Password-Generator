@@ -62,6 +62,10 @@ body {
   text-align: center;
 }
 
+.output {
+  text-align: center;
+}
+
 .copyButton {
   margin-top: 8px;
 }
@@ -124,6 +128,10 @@ body {
 }
 
 #outputField2 {
+  text-align: center;
+}
+
+.output2 {
   text-align: center;
 }
 

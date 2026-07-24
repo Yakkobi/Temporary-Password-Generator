@@ -145,22 +145,22 @@ generateButton.addEventListener("click", function (generateButtonClick) {
     password = password;
   }
 
-  output.textContent = password;
+  output.value = password;
 });
 
 //First Copy Password button.
 copyButton.addEventListener("click", function (copyButtonClick) {
-  navigator.clipboard.writeText(output.textContent);
+  navigator.clipboard.writeText(output.value);
 });
 
-//Seconnd Generate New Password button.
+//Second Generate New Password button.
 generateButton2.addEventListener("click", function (generateButton2Click) {
   let password2 = "Your new password TEST";
 
-  output2.textContent = password2;
+  output2.value = password2;
 });
 
 //Second Copy Password button.
 copyButton2.addEventListener("click", function (copyButton2Click) {
-  navigator.clipboard.writeText(output2.textContent);
+  navigator.clipboard.writeText(output2.value);
 });
