@@ -154,7 +154,12 @@ copyButton.addEventListener("click", function (copyButtonClick) {
 
 //Second Generate New Password button.
 generateButton2.addEventListener("click", function (generateButton2Click) {
-  let password2 = "Your new password TEST";
+  const passwordLength = Number(lengthSlider.value);
+  let password2 = "";
+
+  for (let i = 0; i < passwordLength; i++) {
+    password2 += getRandomCharacter();
+  }
 
   output2.value = password2;
 });
