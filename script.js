@@ -79,75 +79,70 @@ const output = document.querySelector(".output");
 const output2 = document.querySelector(".output2");
 const copyButton = document.querySelector(".copyButton");
 const copyButton2 = document.querySelector(".copyButton2");
+let endNumber = "";
 
 //First Generate New Password button.
 generateButton.addEventListener("click", function (generateButtonClick) {
-  //Decides if the first word should be a color or a different adjective and returns it to the firstPasswordParameter variable.
+  //Decides if the first work should be a color or another adjective.
   function getFirstPasswordParameter() {
     let passwordPartOne = Math.random();
-
     if (passwordPartOne <= 0.54) return "color";
     else return "adjective";
   }
   const firstPasswordParameter = getFirstPasswordParameter();
 
-  //Decides if the first word should be an animal or a noun and returns it to the secondPasswordParameter variable.
+  //Decides if if the second work should be an animal or a noun.
   function getSecondPasswordParameter() {
     let passwordPartTwo = Math.random();
-
     if (passwordPartTwo <= 0.54) return "animal";
     else return "noun";
   }
   const secondPasswordParameter = getSecondPasswordParameter();
 
-  //Mashes the first and second words together when combineFirstAndSecondWords() is called.
   function combineFirstAndSecondWords(
     firstPasswordParameter,
     secondPasswordParameter,
   ) {
     let firstWord;
     let secondWord;
-
     if (firstPasswordParameter === "color") {
       firstWord = colors[Math.floor(Math.random() * colors.length)];
     } else if (firstPasswordParameter === "adjective") {
       firstWord = adjectives[Math.floor(Math.random() * adjectives.length)];
     }
-
     if (secondPasswordParameter === "animal") {
       secondWord = animals[Math.floor(Math.random() * animals.length)];
     } else if (secondPasswordParameter === "noun") {
       secondWord = nouns[Math.floor(Math.random() * nouns.length)];
     }
-
     return firstWord + secondWord;
   }
 
-  let firstNumber = Math.floor(Math.random() * 10);
-  let secondNumber = Math.floor(Math.random() * 10);
-
-  if (includeYear) {
-    const currentYear = new Date().getFullYear();
-    firstNumber = currentYear;
-    secondNumber = "";
+  function getRandomNumber() {
+    return Math.floor(Math.random() * 10);
   }
 
-  //If replaceLetterWithSymbols is true, replaces the first A/a and the first S/s in the generated password with a @ and a $ symbol respectively.
+  if (includeYear) {
+    endNumber = new Date().getFullYear().toString();
+  } else {
+    const totalEndNumbers = Number(numbersSlider.value);
+    endNumber = "";
+    for (let i = 0; i < totalEndNumbers; i++) {
+      endNumber += getRandomNumber();
+    }
+  }
+
   let password =
     combineFirstAndSecondWords(
       firstPasswordParameter,
       secondPasswordParameter,
-    ) +
-    firstNumber +
-    secondNumber;
+    ) + endNumber;
 
   if (replaceLettersWithSymbols) {
     password = password.replaceAll("a", "@");
     password = password.replaceAll("A", "@");
     password = password.replaceAll("s", "$");
     password = password.replaceAll("S", "$");
-  } else {
-    password = password;
   }
 
   output.value = password;
