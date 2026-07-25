@@ -109,7 +109,8 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.lengthValue {
+
+.numbersSliderValue {
   font-size: 10px;
 }
 
@@ -164,6 +165,11 @@ body {
   row-gap: 15px;
   font-size: 15px;
 }
+
+.lengthValue {
+  font-size: 10px;
+}
+
 .optionRow2 {
   display: flex;
   flex-direction: row;

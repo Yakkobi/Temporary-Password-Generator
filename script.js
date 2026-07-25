@@ -164,3 +164,17 @@ generateButton2.addEventListener("click", function (generateButton2Click) {
 copyButton2.addEventListener("click", function (copyButton2Click) {
   navigator.clipboard.writeText(output2.value);
 });
+
+//Updates the number underneath the "Length" slider as it moves.
+const lengthSlider = document.querySelector(".lengthSlider");
+const lengthValue = document.querySelector(".lengthValue");
+lengthSlider.addEventListener("input", function () {
+  lengthValue.textContent = lengthSlider.value;
+});
+
+//Updates the number underneath the "Numbers" slider as it moves.
+const numbersSlider = document.querySelector(".numbersSlider");
+const numbersSliderValue = document.querySelector(".numbersSliderValue");
+numbersSlider.addEventListener("input", function () {
+  numbersSliderValue.textContent = numbersSlider.value;
+});
