@@ -205,3 +205,11 @@ numbersOptionCheckbox.addEventListener("change", function () {
 symbolsOptionCheckbox.addEventListener("change", function () {
   includeSymbols = symbolsOptionCheckbox.checked;
 });
+
+//Function for the second password generator. Grabs from a list of all possible characters (characterPool) and outputs them.
+function getRandomCharacter() {
+  const characterPool =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
+  const randomIndex = Math.floor(Math.random() * characterPool.length);
+  return characterPool.charAt(randomIndex);
+}
