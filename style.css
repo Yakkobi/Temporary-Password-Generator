@@ -65,6 +65,7 @@ body {
 
 .output {
   text-align: center;
+  width: 225px;
 }
 
 .copyButton {
@@ -147,6 +148,7 @@ body {
 
 .output2 {
   text-align: center;
+  width: 225px;
 }
 
 .copyButton2 {
