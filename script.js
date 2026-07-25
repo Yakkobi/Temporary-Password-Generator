@@ -178,3 +178,30 @@ const numbersSliderValue = document.querySelector(".numbersSliderValue");
 numbersSlider.addEventListener("input", function () {
   numbersSliderValue.textContent = numbersSlider.value;
 });
+
+//Listeners that see if a box is checked or not and returns the value of true/false depending on the check.
+const includeYearCheckbox = document.querySelector("#includeYear");
+const symbolReplaceCheckbox = document.querySelector("#symbolReplace");
+const lettersOptionCheckbox = document.querySelector("#lettersOption");
+const numbersOptionCheckbox = document.querySelector("#numbersOption");
+const symbolsOptionCheckbox = document.querySelector("#symbolsOption");
+let includeYear = includeYearCheckbox.checked;
+let replaceLettersWithSymbols = symbolReplaceCheckbox.checked;
+let includeLetters = lettersOptionCheckbox.checked;
+let includeNumbers = numbersOptionCheckbox.checked;
+let includeSymbols = symbolsOptionCheckbox.checked;
+includeYearCheckbox.addEventListener("change", function () {
+  includeYear = includeYearCheckbox.checked;
+});
+symbolReplaceCheckbox.addEventListener("change", function () {
+  replaceLettersWithSymbols = symbolReplaceCheckbox.checked;
+});
+lettersOptionCheckbox.addEventListener("change", function () {
+  includeLetters = lettersOptionCheckbox.checked;
+});
+numbersOptionCheckbox.addEventListener("change", function () {
+  includeNumbers = numbersOptionCheckbox.checked;
+});
+symbolsOptionCheckbox.addEventListener("change", function () {
+  includeSymbols = symbolsOptionCheckbox.checked;
+});
