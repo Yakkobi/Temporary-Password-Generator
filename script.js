@@ -138,9 +138,11 @@ generateButton.addEventListener("click", function (generateButtonClick) {
       secondPasswordParameter,
     ) + endNumber;
 
-  if (replaceLettersWithSymbols) {
+  if (replaceA) {
     password = password.replaceAll("a", "@");
     password = password.replaceAll("A", "@");
+  }
+  if (replaceS) {
     password = password.replaceAll("s", "$");
     password = password.replaceAll("S", "$");
   }
@@ -186,20 +188,25 @@ numbersSlider.addEventListener("input", function () {
 
 //Listeners that see if a box is checked or not and returns the value of true/false depending on the check.
 const includeYearCheckbox = document.querySelector("#includeYear");
-const symbolReplaceCheckbox = document.querySelector("#symbolReplace");
+const replaceACheckbox = document.querySelector("#replaceA");
+const replaceSCheckbox = document.querySelector("#replaceS");
 const lettersOptionCheckbox = document.querySelector("#lettersOption");
 const numbersOptionCheckbox = document.querySelector("#numbersOption");
 const symbolsOptionCheckbox = document.querySelector("#symbolsOption");
 let includeYear = includeYearCheckbox.checked;
-let replaceLettersWithSymbols = symbolReplaceCheckbox.checked;
+let replaceA = replaceACheckbox.checked;
+let replaceS = replaceSCheckbox.checked;
 let includeLetters = lettersOptionCheckbox.checked;
 let includeNumbers = numbersOptionCheckbox.checked;
 let includeSymbols = symbolsOptionCheckbox.checked;
 includeYearCheckbox.addEventListener("change", function () {
   includeYear = includeYearCheckbox.checked;
 });
-symbolReplaceCheckbox.addEventListener("change", function () {
-  replaceLettersWithSymbols = symbolReplaceCheckbox.checked;
+replaceACheckbox.addEventListener("change", function () {
+  replaceA = replaceACheckbox.checked;
+});
+replaceSCheckbox.addEventListener("change", function () {
+  replaceS = replaceSCheckbox.checked;
 });
 lettersOptionCheckbox.addEventListener("change", function () {
   includeLetters = lettersOptionCheckbox.checked;
