@@ -126,6 +126,12 @@ generateButton.addEventListener("click", function (generateButtonClick) {
   let firstNumber = Math.floor(Math.random() * 10);
   let secondNumber = Math.floor(Math.random() * 10);
 
+  if (includeYear) {
+    const currentYear = new Date().getFullYear();
+    firstNumber = currentYear;
+    secondNumber = "";
+  }
+
   //If replaceLetterWithSymbols is true, replaces the first A/a and the first S/s in the generated password with a @ and a $ symbol respectively.
   let password =
     combineFirstAndSecondWords(
