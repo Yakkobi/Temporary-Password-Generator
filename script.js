@@ -73,7 +73,6 @@ const nouns = [
   "Vineyard", "Cascade", "Summit", "Ridge"
 ];
 
-let replaceLettersWithSymbols = true;
 const generateButton = document.querySelector(".generateButton");
 const generateButton2 = document.querySelector(".generateButton2");
 const output = document.querySelector(".output");
