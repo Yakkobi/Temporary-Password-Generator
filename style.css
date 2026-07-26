@@ -3,6 +3,24 @@ body {
   color: white;
 }
 
+.rhinoPassTitle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(179, 179, 179);
+  font-size: 23.5px;
+  font-family:
+    "Arial black", "Franklin Gothic Heavy", "Impact", "Lucida Sans", Arial,
+    sans-serif;
+}
+.rhinoPassTitle img {
+  position: absolute;
+  right: 34px;
+  height: 37.5px;
+  width: 80px;
+}
+
 .titleOnePart1 {
   margin-top: 40px;
   text-align: center;
@@ -37,6 +55,12 @@ body {
   100% {
     background-position: 200% center;
   }
+}
+
+.rhinoImage {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
 }
 
 .passwordGenerator {
