@@ -13,7 +13,7 @@ body {
     "Arial black", "Franklin Gothic Heavy", "Impact", "Lucida Sans", Arial,
     sans-serif;
   -webkit-text-stroke: 1px black;
-  margin-right: 32.8px;
+  margin-right: 35.8px;
 }
 .titleSpacer {
   width: 75px;
@@ -25,8 +25,20 @@ body {
   margin-top: 0.7px;
 }
 
+.rhinoImage {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+}
+
+#title1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+}
+
 .titleOnePart1 {
-  margin-top: 40px;
   text-align: center;
   font-size: 18px;
   font-family: sans-serif;
@@ -61,30 +73,16 @@ body {
   }
 }
 
-.rhinoImage {
-  height: 30px;
-  width: 30px;
-  object-fit: contain;
-}
-
-.passwordGenerator {
+.passwordsTitle {
   text-align: center;
   font-size: 18px;
   font-family: sans-serif;
   font-weight: 900;
-  background-image: linear-gradient(
-    to right,
-    red,
-    orange,
-    yellow,
-    green,
-    aqua,
-    violet
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  margin-bottom: 20px;
+  color: #b4b4b4;
+}
+
+.titleSpacer2 {
+  width: 10px;
 }
 
 #outputField {
@@ -146,8 +144,15 @@ body {
   font-size: 10px;
 }
 
+#title2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 52px;
+  margin-bottom: 5px;
+}
+
 .titleTwoPart1 {
-  margin-top: 45px;
   text-align: center;
   font-size: 18px;
   font-family: sans-serif;
@@ -171,6 +176,18 @@ body {
   color: transparent;
 
   animation: shift-rainbow 1.8s linear infinite;
+}
+
+.titleSpacer3 {
+  width: 10px;
+}
+
+.passwordsTitle2 {
+  text-align: center;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 900;
+  color: #b4b4b4;
 }
 
 #outputField2 {
