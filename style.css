@@ -4,21 +4,24 @@ body {
 }
 
 .rhinoPassTitle {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   color: rgb(179, 179, 179);
-  font-size: 23.5px;
+  font-size: 22px;
   font-family:
     "Arial black", "Franklin Gothic Heavy", "Impact", "Lucida Sans", Arial,
     sans-serif;
+  margin-right: 34px;
+}
+.titleSpacer {
+  width: 75px;
 }
 .rhinoPassTitle img {
-  position: absolute;
-  right: 34px;
-  height: 37.5px;
-  width: 80px;
+  height: 33px;
+  width: 50px;
+  margin-left: 5px;
+  margin-top: 2px;
 }
 
 .titleOnePart1 {
